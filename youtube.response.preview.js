@@ -2408,7 +2408,7 @@
     }
 
     decodeArgument() {
-      let e = {lyricLang: "zh-Hans", captionLang: "zh-Hans", blockUpload: !0, blockImmersive: !0, debug: !1};
+      let e = {lyricLang: "vi", captionLang: "vi", blockUpload: !0, blockImmersive: !0, debug: !1};
       return y.decodeParams(e)
     }
 
