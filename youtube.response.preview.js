@@ -2402,13 +2402,13 @@
     decoder = new TextDecoder("utf-8", {fatal: !1, ignoreBOM: !0});
 
     constructor(e, n) {
-      this.name = n, this.msgType = e, y.isDebug = Boolean(this.argument.debug), y.debug(this.name);
+      this.name = n, this.msgType = e, this.argument = this.decodeArgument(), y.isDebug = Boolean(this.argument.debug), y.debug(this.name);
       let r = y.getJSON("YouTubeAdvertiseInfo");
       y.debug(`currentVersion:  ${this.version}`), y.debug(`storedVersion:  ${r.version}`), r?.version === this.version && Object.assign(this, r)
     }
 
     decodeArgument() {
-      let e = {lyricLang: "vi", captionLang: "vi", blockUpload: !0, blockImmersive: !0, debug: !1};
+      let e = {blockUpload: !0, blockImmersive: !0, debug: !1};
       return y.decodeParams(e)
     }
 
